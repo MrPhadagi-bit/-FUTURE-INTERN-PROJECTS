@@ -1,0 +1,15 @@
+{
+  "dataset_rows": 48,
+  "category_model": {
+    "accuracy": 0.75,
+    "precision_weighted": 0.8167,
+    "recall_weighted": 0.75,
+    "f1_weighted": 0.7542
+  },
+  "priority_model": {
+    "accuracy": 0.4167,
+    "precision_weighted": 0.3278,
+    "recall_weighted": 0.4167,
+    "f1_weighted": 0.3655
+  }
+}

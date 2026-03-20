@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Local model artifacts
+projects/support-ticket-classification/models/*.joblib
+
+# Matplotlib cache
+projects/superstore-sales-forecasting/.matplotlib/

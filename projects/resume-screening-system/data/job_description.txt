@@ -1,0 +1,28 @@
+Machine Learning Support Analyst
+
+We are hiring a Machine Learning Support Analyst to help our operations and product teams monitor customer-facing analytics systems, investigate incidents, and improve reporting workflows.
+
+Required skills:
+- Python
+- SQL
+- Machine learning
+- Data analysis
+- Scikit-learn
+- Customer support
+- Ticket triage
+- Reporting
+- Dashboarding
+- Communication
+
+Nice to have:
+- NLP
+- Power BI
+- ETL
+- Git
+- A/B testing
+
+Responsibilities:
+- Investigate product issues using data and logs
+- Build lightweight machine learning solutions for operations teams
+- Support stakeholders with dashboards and weekly insights
+- Document recurring incidents and recommend improvements

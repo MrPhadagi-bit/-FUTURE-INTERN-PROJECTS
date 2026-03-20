@@ -1,0 +1,5 @@
+Alice Mokoena
+
+Data analyst with 4 years of experience supporting customer operations teams. Built SQL dashboards, automated weekly reports in Python, and worked with support managers to monitor service issues. Comfortable using scikit-learn for classification models, KPI reporting, stakeholder communication, and incident analysis.
+
+Skills: Python, SQL, scikit-learn, dashboarding, reporting, customer support, data analysis, communication, Git

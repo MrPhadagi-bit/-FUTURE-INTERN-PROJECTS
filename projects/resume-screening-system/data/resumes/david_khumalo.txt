@@ -1,0 +1,5 @@
+David Khumalo
+
+Machine learning engineer with experience in Python, NLP, scikit-learn, model deployment, and experimentation. Built text classification systems, skill extraction prototypes, and internal analytics tools. Worked less directly with front-line support teams but has strong technical depth.
+
+Skills: Python, machine learning, NLP, scikit-learn, data analysis, Git, A/B testing

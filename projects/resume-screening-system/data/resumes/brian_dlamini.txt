@@ -1,0 +1,5 @@
+Brian Dlamini
+
+Junior software developer focused on backend APIs and deployment automation. Experience with Python, Git, ETL scripts, and cloud services. Helped an internal platform team troubleshoot user issues and write technical documentation. Limited exposure to SQL analytics and machine learning workflows.
+
+Skills: Python, Git, ETL, troubleshooting, documentation

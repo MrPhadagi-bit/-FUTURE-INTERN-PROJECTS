@@ -1,0 +1,10 @@
+{
+  "job_title": "Machine Learning Support Analyst",
+  "candidates_screened": 5,
+  "top_candidate": "Emma Jacobs",
+  "top_candidate_score": 0.3906,
+  "top_candidate_missing_skills": [
+    "machine learning",
+    "scikit-learn"
+  ]
+}

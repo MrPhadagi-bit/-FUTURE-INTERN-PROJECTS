@@ -1,0 +1,25 @@
+{
+  "model_metrics": {
+    "mae": 17656.5096,
+    "rmse": 20540.7686,
+    "mape_pct": 20.816,
+    "mean_bias": -10955.9169
+  },
+  "seasonal_baseline_metrics": {
+    "mae": 20459.8933,
+    "rmse": 23430.1605,
+    "mape_pct": 25.3905,
+    "mean_bias": -16069.9867
+  },
+  "data_summary": {
+    "source_file": "data\\raw\\superstore.csv",
+    "rows_loaded": 9994,
+    "rows_after_cleaning": 9994,
+    "rows_dropped": 0,
+    "start_date": "2015-01-01",
+    "end_date": "2018-12-01",
+    "months_covered": 48,
+    "unique_regions": 4,
+    "unique_categories": 3
+  }
+}

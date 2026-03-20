@@ -1,0 +1,5 @@
+ticket_text,predicted_category,predicted_priority
+Users cannot log in after a password reset and the whole account team is blocked.,Account,High
+Please send a copy of our April invoice and update the billing contact.,Billing,Low
+How do I add a viewer role for our external auditor?,Account,Low
+The dashboard is slow but still working for most users.,Technical Issue,Medium

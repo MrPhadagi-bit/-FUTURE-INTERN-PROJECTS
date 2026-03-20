@@ -1,0 +1,5 @@
+Emma Jacobs
+
+Customer success specialist who moved into operations analytics. Uses SQL and Python to track renewal risks, builds weekly service dashboards, and coordinates ticket triage with support leads. Experienced in reporting, communication, and documenting recurring issues for product teams.
+
+Skills: Python, SQL, customer support, ticket triage, reporting, dashboarding, communication, data analysis

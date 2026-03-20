@@ -1,0 +1,49 @@
+ticket_id,ticket_text,category,priority
+T001,"My credit card was charged twice for the same subscription renewal and I need a refund today.",Billing,High
+T002,"The invoice for March still shows an unpaid balance even though payment went through yesterday.",Billing,Medium
+T003,"Please update our company billing address on the monthly invoice.",Billing,Low
+T004,"Our finance team cannot download the VAT invoice from the portal.",Billing,Medium
+T005,"Automatic payment failed again and our service may be suspended if this is not fixed.",Billing,High
+T006,"Can you explain why our annual plan price changed after the last renewal?",Billing,Low
+T007,"We were billed for five users after downgrading to three seats last week.",Billing,High
+T008,"I need a copy of all receipts for the last quarter for reimbursement records.",Billing,Low
+T009,"The app crashes every time we try to upload a CSV file larger than 10MB.",Technical Issue,High
+T010,"Password reset works, but the mobile app still shows a server error when I log in.",Technical Issue,High
+T011,"Our dashboard loads very slowly during the afternoon and reports timeout errors.",Technical Issue,Medium
+T012,"The export button on the analytics page does nothing in Chrome.",Technical Issue,Medium
+T013,"Notifications stopped syncing between the web app and Android device.",Technical Issue,Medium
+T014,"There is a typo on the settings page and one icon is misaligned.",Technical Issue,Low
+T015,"The API integration is returning a 500 error for all customer requests.",Technical Issue,High
+T016,"Can you help me connect the tool to Slack for daily alerts?",Technical Issue,Low
+T017,"I am locked out of my account after enabling two-factor authentication.",Account,High
+T018,"Please change the admin user from my old work email to my new company email.",Account,Medium
+T019,"How do I deactivate a former employee without deleting our project history?",Account,Low
+T020,"Our single sign-on setup stopped working after the domain migration.",Account,High
+T021,"I cannot verify my email address because the activation link expired.",Account,Medium
+T022,"Please delete my personal profile and remove saved payment details.",Account,Medium
+T023,"How can I add another manager role with limited permissions?",Account,Low
+T024,"We lost access to shared folders after merging two team accounts.",Account,High
+T025,"Do you offer onboarding support for new customers in South Africa?",General Query,Low
+T026,"What is the best way to invite external collaborators to a workspace?",General Query,Low
+T027,"Can you share your uptime SLA and response time commitments?",General Query,Medium
+T028,"I would like a demo of the reporting module for our operations team.",General Query,Low
+T029,"Does the platform support data residency requirements for healthcare clients?",General Query,Medium
+T030,"When will the new audit log feature be available on the standard plan?",General Query,Low
+T031,"We need confirmation that your service is back online before tomorrow's client launch.",General Query,High
+T032,"Can someone clarify whether phone support is included in the enterprise package?",General Query,Low
+T033,"Our card was declined but the amount is still showing as reserved by your billing system.",Billing,High
+T034,"Please split the invoice by department and resend it to our procurement team.",Billing,Low
+T035,"The subscription was cancelled, but we still received a renewal charge this morning.",Billing,High
+T036,"Could you confirm whether wire transfer is supported for enterprise billing?",Billing,Low
+T037,"Users see a blank screen immediately after signing in to the reporting portal.",Technical Issue,High
+T038,"The search function returns incomplete results after the latest browser update.",Technical Issue,Medium
+T039,"Our nightly sync job finished, but the dashboard values are not updating.",Technical Issue,Medium
+T040,"How can I enable desktop notifications for approval requests?",Technical Issue,Low
+T041,"The administrator account was disabled and nobody can manage user permissions now.",Account,High
+T042,"Please reset multi-factor authentication for our regional sales manager.",Account,Medium
+T043,"Where can I update my profile picture and contact number?",Account,Low
+T044,"Two employee accounts were merged incorrectly and they cannot access shared documents.",Account,High
+T045,"Do you have documentation for onboarding a second business unit?",General Query,Low
+T046,"Can you tell us whether your API rate limits change on the enterprise plan?",General Query,Medium
+T047,"Our board meeting is in one hour and we need an urgent status update on today's outage.",General Query,High
+T048,"Is there a template for exporting monthly support activity reports?",General Query,Low

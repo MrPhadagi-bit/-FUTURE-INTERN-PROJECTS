@@ -1,0 +1,6 @@
+rank,candidate_name,similarity_score,skill_coverage,final_score,matched_skills,missing_skills
+1,Emma Jacobs,0.2151,0.8,0.3906,"communication, customer support, dashboarding, data analysis, python, reporting, sql, ticket triage","machine learning, scikit-learn"
+2,Alice Mokoena,0.1858,0.8,0.37,"communication, customer support, dashboarding, data analysis, python, reporting, scikit-learn, sql","machine learning, ticket triage"
+3,Carla Naidoo,0.1753,0.6,0.3027,"communication, customer support, dashboarding, data analysis, reporting, sql","machine learning, python, scikit-learn, ticket triage"
+4,David Khumalo,0.2193,0.4,0.2735,"data analysis, machine learning, python, scikit-learn","communication, customer support, dashboarding, reporting, sql, ticket triage"
+5,Brian Dlamini,0.1013,0.3,0.1609,"machine learning, python, sql","communication, customer support, dashboarding, data analysis, reporting, scikit-learn, ticket triage"
