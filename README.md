@@ -1,4 +1,4 @@
-# Business ML Portfolio
+# Future Intern ML project 
 
 This repository combines three practical machine learning projects that solve real business workflow problems:
 
