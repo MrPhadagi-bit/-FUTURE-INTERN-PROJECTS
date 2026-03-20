@@ -61,8 +61,41 @@ Running the script generates:
 - `models/priority_model.joblib`
 - `outputs/ticket_metrics.json`
 - `outputs/category_confusion_matrix.csv`
+- `outputs/category_confusion_matrix.png`
 - `outputs/priority_confusion_matrix.csv`
+- `outputs/priority_confusion_matrix.png`
 - `outputs/sample_ticket_predictions.csv`
+- `outputs/ticket_summary.md`
+
+## Results Snapshot
+
+The current sample run uses `48` labeled support tickets and produces:
+
+- Category accuracy: `75.0%`
+- Category weighted precision: `81.67%`
+- Priority accuracy: `41.67%`
+- Priority weighted precision: `32.78%`
+
+The category model is already useful for first-pass ticket routing. The priority model is intentionally documented more cautiously because it needs a larger and richer historical dataset to become production-ready.
+
+## Example Predictions
+
+| Ticket Text | Predicted Category | Predicted Priority |
+| --- | --- | --- |
+| Users cannot log in after a password reset and the whole account team is blocked. | Account | High |
+| Please send a copy of our April invoice and update the billing contact. | Billing | Low |
+| How do I add a viewer role for our external auditor? | Account | Low |
+| The dashboard is slow but still working for most users. | Technical Issue | Medium |
+
+## Visuals
+
+Category confusion matrix:
+
+![Category confusion matrix](outputs/category_confusion_matrix.png)
+
+Priority confusion matrix:
+
+![Priority confusion matrix](outputs/priority_confusion_matrix.png)
 
 ## How It Works
 

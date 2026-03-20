@@ -1,15 +1,23 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 
+import matplotlib
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
+MPL_CONFIG_DIR = ROOT_DIR / ".matplotlib"
+MPL_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(MPL_CONFIG_DIR))
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
 DATA_DIR = ROOT_DIR / "data"
 RESUMES_DIR = DATA_DIR / "resumes"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
@@ -111,6 +119,23 @@ def build_skill_matrix(job_description: str, resumes: dict[str, str]) -> pd.Data
     return pd.DataFrame(records)
 
 
+def save_rankings_plot(rankings: pd.DataFrame, output_path: Path) -> None:
+    fig, ax = plt.subplots(figsize=(8, 5))
+    plot_frame = rankings.sort_values("final_score", ascending=True)
+    ax.barh(plot_frame["candidate_name"], plot_frame["final_score"], color="#2563eb")
+    ax.set_title("Resume Ranking Scores")
+    ax.set_xlabel("Final score")
+    ax.set_ylabel("Candidate")
+
+    for index, value in enumerate(plot_frame["final_score"]):
+        ax.text(value + 0.005, index, f"{value:.3f}", va="center", fontsize=9)
+
+    ax.set_xlim(0, max(plot_frame["final_score"]) + 0.1)
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=160)
+    plt.close(fig)
+
+
 def main() -> None:
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -125,6 +150,7 @@ def main() -> None:
 
     rankings.to_csv(OUTPUTS_DIR / "candidate_rankings.csv")
     skill_matrix.to_csv(OUTPUTS_DIR / "candidate_skill_matrix.csv", index=False)
+    save_rankings_plot(rankings, OUTPUTS_DIR / "candidate_rankings.png")
 
     top_candidate = rankings.iloc[0]
     summary = {

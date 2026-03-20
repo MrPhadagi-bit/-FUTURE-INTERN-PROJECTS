@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 
 import joblib
+import matplotlib
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
@@ -14,6 +16,12 @@ from sklearn.svm import LinearSVC
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
+MPL_CONFIG_DIR = ROOT_DIR / ".matplotlib"
+MPL_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(MPL_CONFIG_DIR))
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
 DATA_PATH = ROOT_DIR / "data" / "support_tickets.csv"
 MODELS_DIR = ROOT_DIR / "models"
 OUTPUTS_DIR = ROOT_DIR / "outputs"
@@ -96,6 +104,25 @@ def save_confusion_matrix(labels: list[str], matrix: list[list[int]], output_pat
     frame.to_csv(output_path)
 
 
+def save_confusion_matrix_plot(labels: list[str], matrix: list[list[int]], title: str, output_path: Path) -> None:
+    fig, ax = plt.subplots(figsize=(6, 5))
+    image = ax.imshow(matrix, cmap="Blues")
+    ax.set_xticks(range(len(labels)), labels=labels, rotation=20, ha="right")
+    ax.set_yticks(range(len(labels)), labels=labels)
+    ax.set_xlabel("Predicted")
+    ax.set_ylabel("Actual")
+    ax.set_title(title)
+
+    for row_index, row in enumerate(matrix):
+        for col_index, value in enumerate(row):
+            ax.text(col_index, row_index, value, ha="center", va="center", color="#0f172a")
+
+    fig.colorbar(image, ax=ax, fraction=0.046, pad=0.04)
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=160)
+    plt.close(fig)
+
+
 def main() -> None:
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -132,6 +159,12 @@ def main() -> None:
         category_results["confusion_matrix"],
         OUTPUTS_DIR / "category_confusion_matrix.csv",
     )
+    save_confusion_matrix_plot(
+        category_results["labels"],
+        category_results["confusion_matrix"],
+        "Ticket Category Confusion Matrix",
+        OUTPUTS_DIR / "category_confusion_matrix.png",
+    )
     joblib.dump(category_model, MODELS_DIR / "category_model.joblib")
 
     priority_model = build_pipeline()
@@ -141,6 +174,12 @@ def main() -> None:
         priority_results["labels"],
         priority_results["confusion_matrix"],
         OUTPUTS_DIR / "priority_confusion_matrix.csv",
+    )
+    save_confusion_matrix_plot(
+        priority_results["labels"],
+        priority_results["confusion_matrix"],
+        "Ticket Priority Confusion Matrix",
+        OUTPUTS_DIR / "priority_confusion_matrix.png",
     )
     joblib.dump(priority_model, MODELS_DIR / "priority_model.joblib")
 

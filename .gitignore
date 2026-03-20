@@ -9,4 +9,6 @@ __pycache__/
 projects/support-ticket-classification/models/*.joblib
 
 # Matplotlib cache
+projects/support-ticket-classification/.matplotlib/
+projects/resume-screening-system/.matplotlib/
 projects/superstore-sales-forecasting/.matplotlib/

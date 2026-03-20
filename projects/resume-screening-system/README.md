@@ -42,8 +42,32 @@ python src/rank_resumes.py
 
 - `outputs/candidate_rankings.csv`
 - `outputs/candidate_skill_matrix.csv`
+- `outputs/candidate_rankings.png`
 - `outputs/ranking_summary.json`
 - `outputs/ranking_summary.md`
+
+## Results Snapshot
+
+The current sample run screens `5` candidates for a `Machine Learning Support Analyst` role.
+
+- Top-ranked candidate: `Emma Jacobs`
+- Final score: `0.3906`
+- Strongest matched skills: `communication`, `customer support`, `dashboarding`, `data analysis`, `python`, `reporting`, `sql`, `ticket triage`
+- Key missing skills: `machine learning`, `scikit-learn`
+
+## Top 5 Ranking Table
+
+| Rank | Candidate | Final Score |
+| --- | --- | ---: |
+| 1 | Emma Jacobs | 0.3906 |
+| 2 | Alice Mokoena | 0.3700 |
+| 3 | Carla Naidoo | 0.3027 |
+| 4 | David Khumalo | 0.2735 |
+| 5 | Brian Dlamini | 0.1609 |
+
+## Visuals
+
+![Candidate ranking chart](outputs/candidate_rankings.png)
 
 ## Scoring Logic
 
